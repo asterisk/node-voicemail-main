@@ -1,0 +1,128 @@
+{
+  "db": {
+    "connectionString": "postgres://voicemail:password@localhost/voicemail",
+    "provider": "postgres"
+  },
+
+  "ari": {
+    "url": "http://ari.js:8088",
+    "username": "user",
+    "password": "secret",
+    "applicationName": "voicemail-main"
+  },
+
+  "prompts": {
+    "mailboxReader": {
+      "introMessages": [{
+        "sound": "sound:vm-youhave",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "number:{messageCount}",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:{folder}",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:message{plural}",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "introNoMessages": [{
+        "sound": "sound:vm-no",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:{folder}",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:vm_messages",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "messageInfo": [{
+        "sound": "{order}",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "noMore": [{
+        "sound": "sound:vm-nomore",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "message": [{
+        "sound": "recording:{recording}",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "menuFirst": [{
+        "sound": "sound:vm-press",
+        "skipable": true,
+        "postSilence": 0
+      },{
+        "sound": "number:1",
+        "skipable": true,
+        "postSilence": 0
+      },{
+        "sound": "sound:vm-for",
+        "skipable": true,
+        "postSilence": 0
+      },{
+        "sound": "sound:vm-{folder}",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:vm-messages",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "menuRepeat": [{
+        "sound": "sound:vm-repeat",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "menuNext": [{
+        "sound": "sound:vm-next",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "menuPrev": [{
+        "sound": "sound:vm-prev",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "menuDelete": [{
+        "sound": "sound:vm-delete",
+        "skipable": true,
+        "postSilence": 0
+      }]
+    }
+  },
+
+  "inputs": {
+    "mailboxReader": {
+      "ready": {
+        "1": "first",
+        "4": "prev",
+        "5": "replay",
+        "6": "next",
+        "7": "delete"
+      }
+    }
+  },
+
+  "mailbox": {
+  }
+}
