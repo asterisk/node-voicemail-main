@@ -185,7 +185,7 @@
 
   "inputs": {
     "mailboxReader": {
-      "changeFolder": {
+      "changingFolder": {
         "*": "submit"
       },
 
