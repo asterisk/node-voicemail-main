@@ -127,14 +127,71 @@
         "sound": "sound:vm-delete",
         "skipable": true,
         "postSilence": 0
+      }],
+
+      "changeFolder": [{
+        "sound": "sound:vm-changeto",
+        "skipable": true,
+        "postSilence": 0
+      },{
+        "sound": "sound:vm-press",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "number:0",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:vm-for",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:vm-INBOX",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:vm-messages",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:vm-press",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "number:1",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:vm-for",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:vm-Old",
+        "skipable": true,
+        "postSilence": 0
+      }, {
+        "sound": "sound:vm-messages",
+        "skipable": true,
+        "postSilence": 0
+      }],
+
+      "invalidFolder": [{
+        "sound": "sound:option-is-invalid",
+        "skipable": true,
+        "postSilence": 0
       }]
     }
   },
 
   "inputs": {
     "mailboxReader": {
+      "changeFolder": {
+        "*": "submit"
+      },
+
       "ready": {
         "1": "first",
+        "2": "changeFolder",
         "4": "prev",
         "5": "replay",
         "6": "next",
