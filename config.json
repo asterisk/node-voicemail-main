@@ -12,6 +12,20 @@
   },
 
   "prompts": {
+    "auth": {
+      "password": [{
+        "sound": "sound:vm-password",
+        "skipable": false,
+        "postSilence": 1
+      }],
+
+      "invalidPassword": [{
+        "sound": "sound:vm-invalidpassword",
+        "skipable": true,
+        "postSilence": 1
+      }]
+    },
+
     "mailboxReader": {
       "introMessages": [{
         "sound": "sound:vm-youhave",
@@ -185,8 +199,14 @@
 
   "inputs": {
     "mailboxReader": {
+      "waitingForAuth": {
+        "regex": "\\d{4}",
+        "action": "authenticate"
+      },
+
       "changingFolder": {
-        "*": "submit"
+        "regex": ".",
+        "action": "submit"
       },
 
       "ready": {
