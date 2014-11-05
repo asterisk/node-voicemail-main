@@ -1,6 +1,6 @@
 {
   "name": "voicemail-main",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Asterisk voicemail main application.",
   "main": "lib/voicemail-main.js",
   "private": true,
