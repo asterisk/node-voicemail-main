@@ -23,6 +23,7 @@
     "voicemail-auth": "git://github.com/asterisk/node-voicemail-auth",
     "voicemail-config": "git://github.com/asterisk/node-voicemail-config",
     "voicemail-data": "git://github.com/asterisk/node-voicemail-data",
+    "voicemail-logging": "git://github.com/asterisk/node-voicemail-logging",
     "voicemail-mailbox": "git://github.com/asterisk/node-voicemail-mailbox",
     "voicemail-main-fsm": "git://github.com/asterisk/node-voicemail-main-fsm",
     "voicemail-notify": "git://github.com/asterisk/node-voicemail-notify",
