@@ -207,6 +207,11 @@
         "sound": "sound:option-is-invalid",
         "skipable": true,
         "postSilence": 0
+      }],
+      "goodbye": [{
+        "sound": "sound:vm-goodbye",
+        "skipable": true,
+        "postSilence": 0
       }]
     }
   },
@@ -229,7 +234,9 @@
         "4": "prev",
         "5": "replay",
         "6": "next",
-        "7": "delete"
+        "7": "delete",
+        "#": "resetExit",
+        "*": "lastOptions"
       }
     }
   },
