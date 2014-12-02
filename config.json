@@ -224,8 +224,10 @@
       },
 
       "changingFolder": {
-        "regex": ".",
-        "action": "submit"
+        "regex": "\\d",
+        "action": "submit",
+        "#": "previousMenu",
+        "*": "repeatMenu"
       },
 
       "ready": {
@@ -235,8 +237,8 @@
         "5": "replay",
         "6": "next",
         "7": "delete",
-        "#": "resetExit",
-        "*": "lastOptions"
+        "#": "previousMenu",
+        "*": "repeatMenu"
       }
     }
   },
