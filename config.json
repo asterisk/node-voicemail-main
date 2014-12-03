@@ -219,13 +219,17 @@
   "inputs": {
     "mailboxReader": {
       "waitingForAuth": {
-        "regex": "\\d{4}",
-        "action": "authenticate"
+        "regex": {
+          "match": "\\d{4}",
+          "action": "authenticate"
+        }
       },
 
       "changingFolder": {
-        "regex": "\\d",
-        "action": "submit",
+        "regex": {
+          "match": "\\d",
+          "action": "submit"
+        },
         "#": "previousMenu",
         "*": "repeatMenu"
       },
@@ -241,8 +245,5 @@
         "*": "repeatMenu"
       }
     }
-  },
-
-  "mailbox": {
   }
 }
