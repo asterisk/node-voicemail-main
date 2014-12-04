@@ -103,7 +103,10 @@ describe('voicemail-main', function() {
           info: function() {},
           warn: function() {},
           error: function() {},
-          fatal: function() {}
+          fatal: function() {},
+          child: function() {
+            return this;
+          }
         };
       }
     };
