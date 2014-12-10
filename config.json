@@ -207,6 +207,11 @@
         "sound": "sound:option-is-invalid",
         "skipable": true,
         "postSilence": 0
+      }],
+      "goodbye": [{
+        "sound": "sound:vm-goodbye",
+        "skipable": true,
+        "postSilence": 0
       }]
     }
   },
@@ -214,13 +219,19 @@
   "inputs": {
     "mailboxReader": {
       "waitingForAuth": {
-        "regex": "\\d{4}",
-        "action": "authenticate"
+        "regex": {
+          "match": "\\d{4}",
+          "action": "authenticate"
+        }
       },
 
       "changingFolder": {
-        "regex": ".",
-        "action": "submit"
+        "regex": {
+          "match": "\\d",
+          "action": "submit"
+        },
+        "#": "previousMenu",
+        "*": "repeatMenu"
       },
 
       "ready": {
@@ -229,11 +240,10 @@
         "4": "prev",
         "5": "replay",
         "6": "next",
-        "7": "delete"
+        "7": "delete",
+        "#": "previousMenu",
+        "*": "repeatMenu"
       }
     }
-  },
-
-  "mailbox": {
   }
 }
